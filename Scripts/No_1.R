@@ -17,6 +17,7 @@ B
 # C
 # Probabilitas kurang dari 3 bayi adalah laki-laki
 C <- pbinom(2, n, p)
+C
 
 # D
 # Probabilitas 3 atau lebih bayi adalah laki-laki
