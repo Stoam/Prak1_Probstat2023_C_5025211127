@@ -147,6 +147,10 @@ Distribusi yang digunakan adalah Distribusi Poisson dengan parameter `lambda = 1
 Untuk menghitung Distribusi Poisson di R bisa menggunakan fungsi `dpois()` seperti berikut :
 
 ```R
+# A
+# Menggunakan Distribusi Poisson
+lambda = 1.8
+
 # B
 # Probabilitas 4 kematian kanker tulang (Tidak Biasa)
 B <- dpois(4, lambda)
@@ -213,3 +217,44 @@ plot(0:10, dpois(0:10, lambda), type = 'h', lwd = 3,
 ## Soal 3
 
 ### 3A
+
+```R
+x = 3
+v = 10
+
+# A
+# Fungsi Probabilitas Distribusi Chi-Square
+dchisq(x, v)
+```
+
+Berikut adalah hasilnya :
+
+![output_3A](Images/output_3A.png)
+
+### 3B
+
+```R
+# B
+# Histogram dari Distribusi Chi-Square dengan 500 data acak
+hist(rchisq(n = 500, df = v), main = "Histogram Distribusi Chi-Square",
+     xlab = "Nilai", ylab = "Frekuensi")
+```
+
+Berikut adalah hasilnya :
+
+![plot_3B](Images/plot_3B.png)
+
+### 3C
+
+```R
+# C
+# Rataan dan Varian Distribusi Chi-Square
+mean <- v
+varian <- 2 * v
+mean
+varian
+```
+
+Berikut adalah hasilnya :
+
+![output_3C](Images/output_3C.png)
