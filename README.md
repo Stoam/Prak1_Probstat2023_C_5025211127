@@ -274,7 +274,7 @@ sd = 5
 
 ### 4A
 
-> **Fungsi probabilitas Distribusi Normal P(X1 <= x <= X2), hitung z-score, dan plot data. 
+> **Fungsi probabilitas Distribusi Normal P(X1 <= x <= X2), hitung z-score, dan plot data** 
 
 Pertama kita generate suatu Data Bangkitan Acak Distribusi Normal, kemudian hitung rata-ratanya, misalkan hasilnya bernama `avg`.
 
