@@ -1,8 +1,10 @@
 # Praktikum Probstat Modul 1
 
-Nama : Nadif Mustafa
-NRP : 5025211127
-Kelas : C
+## Identitas
+
+| Nama          | NRP           | Kelas |
+| ---           | ---           | ---   |
+| Nadif Mustafa | 5025211127    | C     |
 
 ## Soal 1
 
@@ -127,3 +129,87 @@ plot(x, dbinom(x, n, p), type = 'h', lwd = 3,
 Berikut adalah hasilnya :
 
 ![plot_1F](Images/plot_1F.png)
+
+## Soal 2
+
+> **Banyak kematian karena kanker tulang untuk seluruh pekerja dalam 20 tahun ke depan adalah 1.8**
+
+### 2A
+
+> **Pendistribusian banyak kematian karena kanker tulang, serta tentukan distribusi dengan parameter yang sesuai**
+
+Distribusi yang digunakan adalah Distribusi Poisson dengan parameter `lambda = 1.8`.
+
+### 2B
+
+> **Probabilitas 4 kematian akibat kanker tulang**
+
+Untuk menghitung Distribusi Poisson di R bisa menggunakan fungsi `dpois()` seperti berikut :
+
+```R
+# B
+# Probabilitas 4 kematian kanker tulang (Tidak Biasa)
+B <- dpois(4, lambda)
+B
+```
+
+Berikut adalah hasilnya :
+
+![output_2B](Images/output_2B.png)
+
+### 2C
+
+```R
+# C
+# Peluang paling banyak 4 kematian kanker tulang
+C <- ppois(4, lambda)
+C
+```
+
+Berikut adalah hasilnya :
+
+![output_2C](Images/output_2C.png)
+
+### 2D
+
+```R
+# D
+# Peluang lebih dari 4 kematian kanker tulang
+D <- 1 - C
+D
+```
+
+Berikut adalah hasilnya :
+
+![output_2D](Images/output_2D.png)
+
+### 2E
+
+```R
+# E
+# Nilai Harapan dan Standar Deviasi kematian kanker tulang
+nilai_harapan <- lambda
+sd <- lambda
+nilai_harapan
+sd
+```
+
+Berikut adalah hasilnya :
+
+![output_2E](Images/output_2E.png)
+
+### 2F
+
+```R
+# F
+# Histogram Pendistribusian kematian kanker tulang
+plot(0:10, dpois(0:10, lambda), type = 'h', lwd = 3,
+     main = "Distribusi banyak kematian akibat kanker tulang",
+     xlab = "Jumlah Kematian", ylab = "Probabilitas")
+```
+
+![plot_2F](Images/plot_2F.png)
+
+## Soal 3
+
+### 3A
