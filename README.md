@@ -315,7 +315,31 @@ Plot :
 
 ### 4B
 
+Script :
+
+```R
+# B
+# Histogram Distribusi Normal dengan breaks 50
+hist(data, breaks = 50)
+```
+
+Hasil Histogram :
+
+![histo_4B](Images/histo_4B.png)
+
 ### 4C
+
+Script :
+
+```R
+# C
+# Varian data bangkitan acak Distribusi Normal
+var(data)
+```
+
+Hasil :
+
+![output_4C](Images/output_4C.png)
 
 ## Soal 5
 
