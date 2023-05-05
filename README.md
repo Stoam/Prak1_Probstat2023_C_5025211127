@@ -90,11 +90,14 @@ Berikut adalah hasilnya :
 > **Nilai Harapan dan Simpangan Baku banyak bayi laki-laki**
 
 Nilai Harapan dari Distribusi Binomial adalah perkalian jumlah percobaan dengan kemungkinan sukses.
+
 Pada soal ini, jumlah percobaan `n = 10` dan kemungkinan sukses `p = 0.488`.
 Sehingga nilai harapannya adalah `10 * 0.488 = 4.88`.
 
 Nilai Simpangan Baku dari Distribusi Binomial adalah akar dari variannya.
-Niali Varian dari Distribusi Binomial adalah perkalian antara jumlah percobaan, kemungkinan sukses, dan kemungkinan gagal.
+
+Nilai Varian dari Distribusi Binomial adalah perkalian antara jumlah percobaan, kemungkinan sukses, dan kemungkinan gagal.
+
 Maka nilai simpangan baku adalah `sqrt(10 * 0.488 * (1 - 0.488)) = 1.580683`
 
 Berikut adalah scriptnya :
@@ -273,6 +276,14 @@ sd = 5
 
 > **Fungsi probabilitas Distribusi Normal P(X1 <= x <= X2), hitung z-score, dan plot data. 
 
+Pertama kita generate suatu Data Bangkitan Acak Distribusi Normal, kemudian hitung rata-ratanya, misalkan hasilnya bernama `avg`.
+
+Setelah itu, hitung `x1` yang bernilai `floor(avg)` dan `x2` yang bernilai `ceiling(avg)`.
+
+Kemudian, hitung probabilitasnya sesuai dengan fungsi probabilitas yang ada di soal, yaitu `P(X1 <= x <= X2)`.
+
+Setelah itu, hitung z-score dari x1 dan x2 berdasarkan rumus `z-score = (x - mean) / sd`, dengan `mean` adalah rata-rata dan `sd` adalah standar deviasi.
+
 Script Perhitungan :
 
 ```R
@@ -315,6 +326,8 @@ Plot :
 
 ### 4B
 
+> **Histogram dari Distribusi Normal dengan breaks 50**
+
 Script :
 
 ```R
@@ -328,6 +341,8 @@ Hasil Histogram :
 ![histo_4B](Images/histo_4B.png)
 
 ### 4C
+
+> **Nilai Varian dari Data Bangkitan Acak Distribusi Normal**
 
 Script :
 
