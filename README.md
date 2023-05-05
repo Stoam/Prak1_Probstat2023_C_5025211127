@@ -261,7 +261,57 @@ Berikut adalah hasilnya :
 
 ## Soal 4
 
+> **Data bangkitan acak sebanyak 100 dengan `mean = 45` dan `sd = 5`**
+
+```R
+n = 100
+mean = 45
+sd = 5
+```
+
 ### 4A
+
+> **Fungsi probabilitas Distribusi Normal P(X1 <= x <= X2), hitung z-score, dan plot data. 
+
+Script Perhitungan :
+
+```R
+# A
+# Perhitungan
+data <- rnorm(n, mean, sd)
+avg <- mean(data)
+x1 <- floor(avg)
+x2 <- ceiling(avg)
+prob <- pnorm(x2, avg, sd) - pnorm(x1, avg, sd)
+z1 <- (x1 - avg) / sd
+z2 <- (x2 - avg) / sd
+```
+
+Script Hasil :
+
+```R
+avg
+x1
+x2
+prob
+z1
+z2
+```
+
+Hasil :
+
+![output_4A](Images/output_4A.png)
+
+Script Plot :
+
+```R
+# Plot
+plot(data)
+```
+
+Plot :
+
+![plot_4A](Images/plot_4A.png)
 
 ### 4B
 
