@@ -258,3 +258,109 @@ varian
 Berikut adalah hasilnya :
 
 ![output_3C](Images/output_3C.png)
+
+## Soal 4
+
+### 4A
+
+### 4B
+
+### 4C
+
+## Soal 5
+
+> **Kerjakan soal-soal berikut menggunakan Distribusi T-Student**
+
+Pada nomor ini cukup kerjakan dengan menggunakan fungsi `pt()` dan `qt()`
+
+### 5A
+
+> **Probabilitas peristiwa acak X kurang dari -2.34 dengan 6 derajat kebebasan**
+
+Berikut adalah scriptnya :
+
+```R
+# A
+pt(q = -2.34, df = 6)
+```
+
+### 5B
+
+> **Probabilitas peristiwa acak X lebih dari 1.34 dengan 6 derajat kebebasan**
+
+Berikut adalah scriptnya :
+
+```R
+# B
+pt(q = 1.34, df = 6, lower.tail = FALSE)
+```
+
+### 5C
+
+> **Probabilitas peristiwa acak X kurang dari -1.23 atau lebih besar dari 1.23 dengan 3 derajat kebebasan**
+
+Berikut adalah scriptnya :
+
+```R
+# C
+pt(q = -1.23, df = 3) + pt(q = 1.23, df = 3, lower.tail = FALSE)
+```
+
+### 5D
+
+> **Probabilitas peristiwa acak X berada di antara -0.94 dan 0.94 dengan 14 derajat kebebasan**
+
+Berikut adalah scriptnya :
+
+```R
+# D
+pt(q = 0.94, df = 14) - pt(q = -0.94, df = 14)
+```
+
+### 5E
+
+> **Nilai t-score dengan 5 derajat kebebasan yang memiliki luasan 0.0333 satuan persegi di bawah kurva dan di sebelah kiri t-score**
+
+Berikut adalah scriptnya :
+
+```R
+# E
+qt(p = 0.333, df = 5)
+```
+
+### 5F
+
+> **Nilai t-score dengan 25 derajat kebebasan yang memiliki luasan 0.125 satuan persegi di bawah kurva dan di sebelah kanan t-score**
+
+Berikut adalah scriptnya :
+
+```R
+# F
+qt(p = 0.125, df = 25, lower.tail = FALSE)
+```
+
+### 5G
+
+> **Nilai t-score dengan 11 derajat kebebasan yang memiliki luasan 0.75 satuan persegi di bawah kurva dan di antara t-score tersebut dan negatif dari nilai t-score**
+
+Berikut adalah scriptnya :
+
+```R
+# G
+qt(p = 0.875, df = 11)
+```
+
+### 5H
+
+> **Nilai t-score dengan 23 derajat kebebasan yang memiliki luasan 0.0333 satuan persegi di bawah kurva dan di luar interval antara t-score dan negatif dari nilai t-score**
+
+Berikut adalah scriptnya :
+
+```R
+# H
+qt(p = 0.98335, df = 23)
+```
+
+### Hasil
+
+![output_5](Images/output_5.png)
